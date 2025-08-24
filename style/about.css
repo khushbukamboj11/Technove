@@ -14,39 +14,65 @@ body {
      justify-content: center;
      padding: 40px;
  }
+.about-section {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Slide down effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
- .about-section {
-     max-width: 1200px;
-     margin: auto;
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     align-items: center;
-     gap: 50px;
- }
+.about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1d3557;
+    position: relative;
+}
+.about-text h2:hover {
+  transform: scale(1.1); /* increase size on hover */
+}
 
- .about-text h2 {
-     font-size: 36px;
-     margin-bottom: 20px;
-     color: #1d3557;
-     position: relative;
- }
+.about-text h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #093754;
+    display: block;
+    margin-top: 10px;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-out 0.3s; /* Delay for underline */
+}
 
- .about-text h2::after {
-     content: "";
-     width: 60px;
-     height: 4px;
-     background: #093754;
-     display: block;
-     margin-top: 10px;
-     border-radius: 2px;
- }
+.about-section.visible .about-text h2::after {
+    transform: scaleX(1);
+}
 
- .about-text p {
-     font-size: 18px;
-     line-height: 1.5;
-     color: #444;
-     text-align: justify;
- }
+.about-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.about-section.visible .about-text p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
  .about-images {
      display: flex;
@@ -158,21 +184,46 @@ body {
      
  }
 
- .founder-text p {
-     font-size: 18px;
-     color: #f1faee;
-     margin-bottom: 15px;
- }
+/* Founder paragraph animation */
+.founder-text p {
+    font-size: 18px;
+    color: #f1faee;
+    margin-bottom: 15px;
+    opacity: 0;                  /* start hidden */
+    transform: translateY(20px); /* slide up */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
- .quote {
-     margin: 30px 0;
-     font-size: 20px;
-     font-style: italic;
-     font-weight: 600;
-     color: #ffdd57;
-     border-left: 4px solid #ffdd57;
-     padding-left: 15px;
- }
+/* Quote animation */
+.quote {
+    margin: 30px 0;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: #ffdd57;
+    border-left: 4px solid #ffdd57;
+    padding-left: 15px;
+    opacity: 0;                  /* start hidden */
+    transform: scale(0.9);       /* slightly smaller */
+    transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+/* When visible (scroll or hover) */
+.founder-text.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.founder-text.visible .quote {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Optional: Hover effect for quote */
+.quote:hover {
+    transform: scale(1.05);       /* slight pop on hover */
+    color: #fff176;               /* subtle color change */
+}
 
  /* Responsive */
  @media (max-width: 900px) {
@@ -192,7 +243,7 @@ body {
      }
  }
 
- .excites-us-section-container {
+.excites-us-section-container {
      max-width: 1200px;
      width: 100%;
      display: flex;
@@ -231,74 +282,112 @@ body {
      object-fit: cover;
      display: block;
  }
+/* Heading animation */
+.excites-us-main-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    opacity: 0;                 /* start hidden */
+    transform: translateY(20px); /* slide up */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
- .excites-us-main-heading {
-     font-size: 2.8rem;
-     font-weight: 800;
-     color: #1a202c;
-     margin-bottom: 1.5rem;
-     line-height: 1.2;
- }
+/* Paragraph animation */
+.excites-us-text-column p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px); /* slide up */
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
 
- .excites-us-text-column p {
-     font-size: 1.05rem;
-     line-height: 1.7;
-     color: #4a5568;
-     margin-bottom: 1.5rem;
- }
+.excites-us-text-column p:last-of-type {
+    margin-bottom: 0;
+}
 
- .excites-us-text-column p:last-of-type {
-     margin-bottom: 0;
- }
+/* When visible (scroll into view) */
+.excites-us-section-container.visible .excites-us-main-heading,
+.excites-us-section-container.visible .excites-us-text-column p {
+    opacity: 1;
+    transform: translateY(0);
+}
 
- @media (max-width: 1024px) {
-     .excites-us-section-container {
-         flex-direction: column;
-     }
+/* Responsive media queries remain unchanged */
+@media (max-width: 1024px) {
+    .excites-us-section-container {
+        flex-direction: column;
+    }
 
-     .excites-us-text-column {
-         padding: 2.5rem;
-     }
+    .excites-us-text-column {
+        padding: 2.5rem;
+    }
 
-     .excites-us-image-column {
-         min-height: 300px;
-     }
- }
+    .excites-us-image-column {
+        min-height: 300px;
+    }
+}
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
+    .excites-us-section-container {
+        border-radius: 1rem;
+    }
 
-     .excites-us-section-container {
-         border-radius: 1rem;
-     }
+    .excites-us-text-column {
+        padding: 1.5rem;
+    }
 
-     .excites-us-text-column {
-         padding: 1.5rem;
-     }
+    .excites-us-main-heading {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
 
-     .excites-us-main-heading {
-         font-size: 2.25rem;
-         margin-bottom: 1rem;
-     }
+    .excites-us-text-column p {
+        font-size: 0.95rem;
+    }
 
-     .excites-us-text-column p {
-         font-size: 0.95rem;
-     }
+    .excites-us-image-column {
+        min-height: 250px;
+        order: -1;
+        border-radius: 1rem 1rem 0 0;
+    }
+}
 
-     .excites-us-image-column {
-         min-height: 250px;
-         order: -1;
-         border-radius: 1rem 1rem 0 0;
-     }
- }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
  /* Container to hide overflow */
 .banner-title {
-  display: inline-block;   /* so it wraps text tightly */
-  overflow: hidden;        /* hides the text before animation */
+  display: inline-block;   /* wraps text tightly */
+  overflow: hidden;        /* hides text before animation */
   height: 1em;             /* adjust to your text height */
+  transition: transform 0.3s ease; /* smooth hover animation */
+}
+
+/* Hover effect */
+.banner-title:hover {
+  transform: scale(1.1); /* increase size on hover */
 }
 
 /* Word animation */
@@ -315,11 +404,3 @@ body {
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
-

@@ -78,7 +78,7 @@
             <a href="/index.html">Home</a>
           </li>
           <li class="nav-link nav-c-changes">
-            <a href="/about.html">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
           <li class="nav-link nav-c-changes">
             <a href="#">Electrical Vehicle</a>
@@ -92,10 +92,10 @@
             ></a>
             <ul class="dropdown-menu">
               <li class="nav-link">
-                <a href="/web.html" style="color: #000">Web Development</a>
+                <a href="web.html" style="color: #000">Web Development</a>
               </li>
               <li class="nav-link">
-                <a href="/app.html" style="color: #000"
+                <a href="app.html" style="color: #000"
                   >Mobile Application Development</a
                 >
               </li>
@@ -185,7 +185,7 @@
     <section class="about">
       <div class="about-section">
         <div class="about-text">
-          <h2>ABOUT US</h2>
+          <h2 class>ABOUT US</h2>
           <p>
             We started this journey with one belief: technology should work for
             people, not the other way around. In a world flooded with apps,
@@ -211,13 +211,31 @@
             same: make it simple, make it smart, make it matter.
           </p>
         </div>
+       <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const aboutSection = document.querySelector('.about-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add('visible');
+          observer.unobserve(aboutSection); // Run only once
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(aboutSection);
+  });
+</script>
+
+
         <div class="about-images">
           <!-- <img src="/assets/imgaes/about.png" alt="Tech with People">
                 <img src="/assets/imgaes/about.png" alt="Tech with People">
                 <img src="/assets/imgaes/about.png" alt="Tech with People">
                 <img src="/assets/imgaes/about.png" alt="Tech with People"> -->
           <img
-            src="/assets/imgaes/ChatGPT Image Aug 23, 2025, 04_11_59 PM.png"
+            src="./assets/imgaes/ChatGPT Image Aug 23, 2025, 04_11_59 PM.png"
             alt="Tech with People"
           />
         </div>
@@ -227,7 +245,7 @@
     <section class="about-founder-section">
       <div class="about-founder">
         <div class="founder-img">
-          <img src="/assets/imgaes/founder.png" alt="Chirag Gupta" />
+          <img src="./assets/imgaes/founder.png" alt="Chirag Gupta" />
         </div>
         <div class="founder-text">
           <h2>ABOUT CHIRAG GUPTA</h2>
@@ -276,6 +294,24 @@
       </div>
     </section>
 
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const founderSection = document.querySelector('.founder-text');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                founderSection.classList.add('visible');
+                observer.unobserve(founderSection); // animate once
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(founderSection);
+});
+</script>
+
+
     <div class="excites-us-section-container">
       <!-- Left Column: Main Text Content -->
       <div class="excites-us-text-column">
@@ -304,21 +340,42 @@
         </p>
       </div>
 
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector('.excites-us-section-container');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                section.classList.add('visible'); // triggers heading & paragraph animation
+                observer.unobserve(section); // animate once
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+});
+</script>
+
+
       <!-- Right Column: Image -->
       <div class="excites-us-image-column">
         <img
-          src="/assets/imgaes/ChatGPT Image Aug 23, 2025, 04_02_39 PM.png"
+          src="./assets/imgaes/ChatGPT Image Aug 23, 2025, 04_02_39 PM.png"
           alt="What Excites Us"
         />
       </div>
     </div>
+
+   
+
 
     <footer class="footer">
       <div class="footer-content">
         <div class="main-columns">
           <!-- Column 1: Logo and Tagline -->
           <div class="column logo-section">
-            <img src="/assets/imgaes/logo 1.png" alt="Company Logo" />
+            <img src="./assets/imgaes/logo 1.png" alt="Company Logo" />
             <h2 class="tagline">
               Empowering Innovation, Driving Digital Success.
             </h2>
@@ -327,20 +384,20 @@
               journey, not a destination
             </p>
             <p style="color: #ffffff" class="follow">
-              <img src="/assets/icons/solar_share-linear.png" alt="" />Follow us
+              <img src="./assets/icons/solar_share-linear.png" alt="" />Follow us
               on -
             </p>
             <div class="social-media">
               <a href="#" class="instagram"
-                ><img src="/assets/icons/skill-icons_instagram.png" alt=""
+                ><img src="./assets/icons/skill-icons_instagram.png" alt=""
               /></a>
               <a href="#" class="facebook"
-                ><img src="/assets/icons/Vector.png" alt=""
+                ><img src="./assets/icons/Vector.png" alt=""
               /></a>
               <a style="width: 120px" href="#" class="youtube"
                 ><img
                   style="scale: 1.2"
-                  src="/assets/icons/icons8-linkedin-48.png"
+                  src="./assets/icons/icons8-linkedin-48.png"
                   alt=""
               /></a>
             </div>
@@ -349,7 +406,7 @@
           <!-- Column 2: House of Operation -->
           <div class="column">
             <h3 style="width: 300px">
-              <img src="/assets/icons/location_on.png" alt="" /> House of
+              <img src="./assets/icons/location_on.png" alt="" /> House of
               Operation
             </h3>
             <p class="address">
@@ -361,7 +418,7 @@
           <!-- Column 3: Services -->
           <div class="column">
             <h3>
-              <img src="/assets/icons/grommet-icons_services.png" alt="" />
+              <img src="./assets/icons/grommet-icons_services.png" alt="" />
               Services
             </h3>
             <ul class="service-list">
@@ -412,7 +469,7 @@
 
           <!-- Column 4: Company -->
           <div class="column">
-            <h3><img src="/assets/icons/mdi_company.png" alt="" /> Company</h3>
+            <h3><img src="./assets/icons/mdi_company.png" alt="" /> Company</h3>
             <ul class="company-list">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Customers FAQ's</a></li>
@@ -445,7 +502,7 @@
           <div class="illustration-placeholder">
             <!-- Replace 'https://placehold.co/400x500/a7d9ed/0056b3?text=Your+Image+Here' with your actual image URL -->
             <img
-              src="/assets/imgaes/It-solu.png"
+              src="./assets/imgaes/It-solu.png"
               alt="Contact Us Illustration"
             />
           </div>
@@ -627,6 +684,6 @@
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script> -->
     <link rel="stylesheet" href="./style/style.css" />
-    <!-- <Script src="/assets/animation/animation.js"></Script> -->
+    <!-- <Script src="./assets/animation/animation.js"></Script> -->
   </body>
 </html>
