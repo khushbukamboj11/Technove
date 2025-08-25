@@ -105,6 +105,11 @@ body {
     margin-top: 20px;
   }
 }
+@media (max-width:600px){
+     .about-images{
+          grid-template-columns:1fr;
+     }
+}
 
 
  .about-founder-section {
