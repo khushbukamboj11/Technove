@@ -82,12 +82,10 @@ body {
 }
 
 .about-images img {
-  width: 100%; /* Responsive */
-  max-width: 570px;
-  height: auto;
-  border-radius: 10px;
+  width: 570px;
+  height: 500px;
   transition: transform 0.3s ease; /* Smooth hover */
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 10px;
 }
 
