@@ -37,7 +37,6 @@ body {
   margin-bottom: 20px;
   color: #1d3557;
   position: relative;
-  transition: transform 0.3s ease; /* Smooth scaling */
 }
 
 .about-text h2:hover {
@@ -78,8 +77,7 @@ body {
 
 .about-images {
   display: grid; /* Changed from flex to grid */
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
