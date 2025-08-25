@@ -6,13 +6,14 @@ body {
      color: #222;
  }
 
- .about {
+.about {
   height: auto;
   background: #f9fbfd;
   color: #222;
   display: flex;
   justify-content: center;
   padding: 40px;
+  overflow-x: hidden; /* prevent unwanted horizontal scroll for container */
 }
 
 .about-section {
@@ -32,11 +33,13 @@ body {
   transform: translateY(0);
 }
 
+/* About Text */
 .about-text h2 {
   font-size: 36px;
   margin-bottom: 20px;
   color: #1d3557;
   position: relative;
+  transition: transform 0.3s ease;
 }
 
 .about-text h2:hover {
@@ -75,16 +78,20 @@ body {
   transform: translateY(0);
 }
 
+/* Images */
 .about-images {
-  display: grid; /* Changed from flex to grid */
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   align-items: flex-start;
+  /* overflow-x: auto; allow scroll if smaller screen */
+  /* scrollbar-width: thin; nice scrollbar for Firefox */
 }
 
 .about-images img {
-  width: 570px;
-  height: 500px;
-  transition: transform 0.3s ease; /* Smooth hover */
+  width: 570px; 
+  height: 450px;
+  object-fit: cover; /* keeps image neat */
+  transition: transform 0.3s ease;
   padding-top: 50px;
   padding-bottom: 10px;
 }
@@ -93,7 +100,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* Responsive: Stack layout */
 @media (max-width: 900px) {
   .about-section {
     grid-template-columns: 1fr;
@@ -101,15 +108,19 @@ body {
   }
 
   .about-images {
-    grid-template-columns: 1fr;
-    margin-top: 20px;
+    justify-content: center;
+    overflow-x: auto;
   }
 }
-@media (max-width:600px){
-     .about-images{
-          grid-template-columns:1fr;
-     }
+
+/* Extra small screens: allow scroll */
+@media (max-width: 600px) {
+  .about-images img {
+    width: 570px; /* keep original size */
+    height: 500px;
+  }
 }
+
 
 
  .about-founder-section {
