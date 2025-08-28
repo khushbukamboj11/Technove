@@ -1,0 +1,206 @@
+.text {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: #00B8F0;
+}
+
+.text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+
+
+
+
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    box-sizing: border-box;
+    margin: 60px 0 60px;
+}
+
+.main-section-container {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.main-text-content {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main-text-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.main-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+
+.main-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 20px;
+}
+
+.main-image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+
+/* Career Section Responsive */
+@media (max-width: 1024px) {
+    .main-section-container {
+        flex-direction: column;
+    }
+
+    /* .main-text-content {
+        padding: 2rem;
+    } */
+
+    .main-image-content {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-section-container {
+        margin: 60px 0;
+        border-radius: 1rem;
+    }
+
+    /* .main-text-content {
+        padding: 1.5rem;
+    } */
+
+    /* .main-text-content h2 {
+        font-size: 2.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .main-text-content p {
+        font-size: 0.95rem;
+    } */
+
+    .main-image-content {
+        height: 250px;
+    }
+}
+
+
+
+/* ===== Features Section Styling ===== */
+.features-list {
+  padding: 80px 20px;
+  background: #f9fbfd;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 50px;
+}
+
+/* ===== Feature Item ===== */
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Style */
+.feature img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Text Style */
+.feature h3 {
+  font-size: 1.5rem;
+  color: #1a202c;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
