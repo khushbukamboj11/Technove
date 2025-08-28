@@ -159,6 +159,7 @@ main-text-content h2 {
 }
 
 /* ===== Feature Item ===== */
+/* ===== Base Feature Style ===== */
 .feature {
   display: flex;
   align-items: flex-start;
@@ -169,6 +170,8 @@ main-text-content h2 {
   background: #ffffff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .feature:hover {
@@ -181,6 +184,7 @@ main-text-content h2 {
   width: 60px;
   height: 60px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* Text Style */
@@ -196,11 +200,48 @@ main-text-content h2 {
   line-height: 1.6;
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive for Tablets ===== */
 @media (max-width: 768px) {
   .feature {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 15px;
+  }
+
+  .feature img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .feature h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Responsive for Mobiles ===== */
+@media (max-width: 480px) {
+  .feature {
+    gap: 15px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .feature img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .feature h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
   }
 }
