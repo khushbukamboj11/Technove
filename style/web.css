@@ -122,7 +122,7 @@ body {
 }
 @media (max-width: 480px) {
   .container-fluid{
-  height: 80vh;
+  height: 110vh;
   width: 100%;
   /* display: flex; */
   
@@ -131,7 +131,7 @@ body {
 }
 .container{
   width: 75%;
-  height: 85%;
+  height: 90%;
   position: relative;
   top: 50%;
   left: 60%;
@@ -142,8 +142,8 @@ body {
   /* padding:117px,140px,80px,230px; */
   background-color: #024475;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
 
 }
 .container h1{
@@ -187,7 +187,7 @@ body {
 
 
 .text {
-      height: 80vh;
+      height: 90vh;
       width: 100%;
       position: relative;
     }
@@ -195,7 +195,7 @@ body {
     .text-section {
       position: absolute;
       height: 70%;
-      width: 50%;
+      width: 60%;
       top: 50%;
       left: 38%;
       transform: translate(-50%, -50%)
@@ -221,8 +221,8 @@ body {
     .text-section p {
       font-size: 16px;
       color: #333;
-      line-height: 1.5;
-      padding-right: 200px;
+      line-height: 1.1;
+      /* padding-right: 200px; */
     }
 
     .grid {
@@ -328,14 +328,14 @@ body {
       .text {
       padding: 0;
       margin: 0;
-      height: 140vh;
+      height: 190vh;
       width: 100vw;
       position: relative;
     }
 
     .text-section {
       position:relative;
-      height: 60%;
+      height: 65%;
       width: 70%;
       padding: 0;
       
@@ -345,7 +345,7 @@ body {
     .text-section h2 {
       font-size: 50px;
       font-weight: bold;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
 
     }
     .text-section h2::before {
