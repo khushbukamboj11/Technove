@@ -4,7 +4,7 @@ body {
      padding: 0;
  }
 .container-fluid{
-  height: 120vh;
+  height: 90vh;
   width: 100%;
   /* display: flex; */
   
@@ -458,11 +458,11 @@ body {
 }
 .GR p{
   color: #fafafa;
-  font-size: 15px;
+  font-size: 16px;
 }
 .GR img{
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 180px;
   padding-bottom: 7px;
 }
 .GC{
@@ -481,11 +481,11 @@ body {
 }
 .GC p{
   color: #fafafa;
-  font-size: 15px;
+  font-size: 16px;
 }
 .GC img{
-  height: 90px;
-  width: 90px;
+  height: 120px;
+  width: 140px;
 }
 .GS{
   /* box-shadow: 0 0 0 3px white; */
@@ -498,16 +498,19 @@ body {
 
 }
 .GS h2{
+  
   color: #fafafa;
-  padding-top: 10px;
+  padding-top: 50px;
 }
 .GS p{
   color: #fafafa;
-  font-size: 15px;
+  font-size: 16px;
 }
 .GS img{
+  padding-top: 20px;
   height: 90px;
-  width: 90px;
+  width: 140px;
+  
 }
 
  }
