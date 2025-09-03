@@ -254,3 +254,376 @@
 .icon-back {
   transform: rotateY(180deg);
 }
+
+
+
+/* <==========================process======================> */
+
+
+
+
+.container-2{
+  max-width: 1200px;
+  height: 240vh;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease;
+  border: 2px solid rgb(177, 199, 232);
+  box-shadow: 0 0 10px white, 0 0 20px rgb(167, 205, 244);
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  padding-right: 20px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  background: #ddd;
+  height: 100%;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  max-width: 110%;
+  height: 50vh;
+  border-radius: 6px;
+}
+ 
+.step-number {
+  font-size: 60px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.step-card:nth-child(1) .step-number {
+  color: #ff5722; /* Orange for Step 1 */
+}
+
+.step-card:nth-child(2) .step-number {
+  color: #009688; /* Green for Step 2 */
+}
+.step-card:nth-child(3) .step-number {
+  color: rgb(134, 6, 28); /* Green for Step 2 */
+}
+.step-card:nth-child(4) .step-number {
+  color:darkturquoise; /* Green for Step 2 */
+}
+.step-card:nth-child(5) .step-number {
+  color: rgb(233, 115, 233); /* Green for Step 2 */
+}
+.step-card:nth-child(6) .step-number {
+  color: rgb(64, 64, 235); /* Green for Step 2 */
+}
+
+.step-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-content {
+    flex-direction: column;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .left {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .step-number {
+    font-size: 32px;
+  }
+}
+@media(max-width:768px){
+  .container-2{
+  max-width: 1200px;
+  height: 510vh;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  padding-right: 20px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  background: #ddd;
+  height: 100%;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  max-width: 110%;
+  height: 20vh;
+  border-radius: 6px;
+}
+ 
+.step-number {
+  font-size: 60px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.step-card:nth-child(1) .step-number {
+  color: #ff5722; /* Orange for Step 1 */
+}
+
+.step-card:nth-child(2) .step-number {
+  color: #009688; /* Green for Step 2 */
+}
+.step-card:nth-child(3) .step-number {
+  color: rgb(134, 6, 28); /* Green for Step 2 */
+}
+.step-card:nth-child(4) .step-number {
+  color:darkturquoise; /* Green for Step 2 */
+}
+.step-card:nth-child(5) .step-number {
+  color: rgb(233, 115, 233); /* Green for Step 2 */
+}
+.step-card:nth-child(6) .step-number {
+  color: rgb(64, 64, 235); /* Green for Step 2 */
+}
+
+.step-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+}
+@media(max-width:480px){
+  .container-2{
+  max-width: 500px;
+  height: 655vh;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  height: 520px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  padding-right: 20px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  background: #ddd;
+  height: 100%;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  max-width: 110%;
+  height: 30vh;
+  border-radius: 6px;
+}
+ 
+.step-number {
+  font-size: 60px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.step-card:nth-child(1) .step-number {
+  color: #ff5722; /* Orange for Step 1 */
+}
+
+.step-card:nth-child(2) .step-number {
+  color: #009688; /* Green for Step 2 */
+}
+.step-card:nth-child(3) .step-number {
+  color: rgb(134, 6, 28); /* Green for Step 2 */
+}
+.step-card:nth-child(4) .step-number {
+  color:darkturquoise; /* Green for Step 2 */
+}
+.step-card:nth-child(5) .step-number {
+  color: rgb(233, 115, 233); /* Green for Step 2 */
+}
+.step-card:nth-child(6) .step-number {
+  color: rgb(64, 64, 235); /* Green for Step 2 */
+}
+
+.step-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+}
+
