@@ -1,0 +1,256 @@
+
+
+.about-sec {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  padding: 80px 50px;
+  /* gap: 40px; */
+  height: 80vh;
+  background-color:floralwhite;
+}
+
+/* Left content */
+.about-con {
+  flex: 1;
+  padding-left: 50px;
+
+
+}
+.about-con h1::before {
+      content: "";
+      width: 40px;
+      height: 6px;
+      background:#540c93;
+      position: absolute;
+      top: 47px;
+      left:5px;
+}
+
+.about-con h1 {
+  font-size: 40px;
+  font-weight:bolder;
+  margin-bottom: 20px;
+  color:black;
+  position: relative;
+}
+
+
+
+.about-con p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Right illustration */
+.about-ima {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-ima img {
+  width: 500px;
+  height: 350px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-sec {
+    flex-direction: column;
+    text-align: center;
+    height:auto;
+  }
+  .about-ima {
+    margin-top: 20px;
+  }
+  .about-con h1::before {
+      content: "";
+      width: 40px;
+      height: 6px;
+      background:#8e2de2;
+      position: absolute;
+      top: 47px;
+      left:auto;
+}
+}
+
+/* <==============================next section=====================> */
+
+.main-sec{
+  text-align: center;
+  /* padding: 80px 20px; */
+  background-color:black;
+  height: 90vh;
+  width: 100%;
+}
+.ios-title {
+  font-size: 90px;
+  font-weight:lighter;
+  margin-bottom: 60px;
+
+}
+
+.ios-title .i {
+  color: orange;
+}
+.ios-title .o {
+  color: violet;
+}
+.ios-title .s {
+  color: cyan;
+}
+
+.devices {
+  margin-top: 260px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  font-size: 160px;
+  font-weight:lighter;
+}
+
+.devices i {
+  color: white;
+}
+@media (max-width: 768px){
+  .ios-title {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  .devices {
+    margin-top: 200px;
+    gap: 5px;
+    font-size: 100px;
+  }
+  
+}
+@media(max-width:480px){
+  .ios-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .devices {
+    margin-top: 170px;
+    gap: 5px;
+    font-size: 70px;
+  }
+}
+
+
+
+/* <===============================cards======================> */
+
+
+.industry-section {
+  /* height: 180vh; */
+  text-align: center;
+  padding: 50px 20px;
+  background:linear-gradient(to bottom,#111827, #1f2937);
+}
+
+.industry-section h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* height: 150vh; */
+}
+
+.card {
+  /* background: linear-gradient(180deg, #0288d1, #26c6da); */
+  background-color:#1f2937;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h2 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Icon Circle with Flip */
+.icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  perspective: 1000px;
+}
+
+.icon-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.icon-inner img{
+  width:70px;
+  height:auto;
+
+}
+
+.icon-wrapper:hover .icon-inner {
+  transform: rotateY(180deg);
+}
+
+.icon-front, .icon-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #0288d1;
+  backface-visibility: hidden;
+}
+
+.icon-back {
+  transform: rotateY(180deg);
+}

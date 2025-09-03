@@ -446,11 +446,12 @@ body {
   padding-right: 20px;
 }
 .GR{
-  box-shadow: 0 0 0 3px white;
   padding-right: 10px;
   padding-left: 30px;
   padding-bottom: 30px;
   margin-right: 50px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white, 0 0 20px white;
 }
 .GR h2{
   color: #fafafa;
@@ -465,11 +466,13 @@ body {
   padding-bottom: 7px;
 }
 .GC{
-  box-shadow: 0 0 0 3px white;
+  /* box-shadow: 0 0 0 3px white; */
   padding-right: 10px;
   padding-left: 30px;
   padding-bottom: 30px;
   margin-right: 50px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white, 0 0 20px white;
 }
 
 .GC h2{
@@ -485,11 +488,14 @@ body {
   width: 90px;
 }
 .GS{
-  box-shadow: 0 0 0 3px white;
+  /* box-shadow: 0 0 0 3px white; */
   padding-right: 10px;
   padding-left: 30px;
   padding-bottom: 30px;
   margin-right: 50px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white, 0 0 20px white;
+
 }
 .GS h2{
   color: #fafafa;
@@ -685,7 +691,7 @@ body {
 .industries {
   padding: 80px 20px;
   text-align: center;
-  background-color: #111;
+  background-color:black;
 }
 .industries h2 {
   font-size: 2rem;
