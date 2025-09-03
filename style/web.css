@@ -219,10 +219,10 @@ body {
 }
 
     .text-section p {
-      font-size: 16px;
+      font-size: 18px;
       color: #333;
-      line-height: 1.1;
-      /* padding-right: 200px; */
+      line-height: 1.7;
+      padding-right: 200px;
     }
 
     .grid {
@@ -345,7 +345,7 @@ body {
     .text-section h2 {
       font-size: 50px;
       font-weight: bold;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
 
     }
     .text-section h2::before {
