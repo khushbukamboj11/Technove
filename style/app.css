@@ -1,100 +1,82 @@
 
 
-.about-sec {
+.container {
+  background: black;
+  padding: 30px;
+  /* border-radius: 15px; */
+  max-width: 100%;
+  width: 100%;
+  height: 130vh;
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.6); */
   display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  padding: 80px 50px;
-  /* gap: 40px; */
-  height: 80vh;
-  background-color:floralwhite;
 }
 
-/* Left content */
-.about-con {
-  flex: 1;
-  padding-left: 50px;
-
-
-}
-.about-con h1::before {
-      content: "";
-      width: 40px;
-      height: 6px;
-      background:#540c93;
-      position: absolute;
-      top: 47px;
-      left:5px;
-}
-
-.about-con h1 {
-  font-size: 40px;
-  font-weight:bolder;
-  margin-bottom: 20px;
-  color:black;
+/* Title */
+.title {
+  height: 10vh;
+  width: 190px;
+  font-size: 35px;
+  color:chocolate;
+  /* display: inline-block; */
+  margin-top: 40px;
+  padding-left: 70px;
   position: relative;
 }
-
-
-
-.about-con p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: black;
-  align-items: center;
-  justify-content: center;
+.title::before {
+      content: "";
+      width: 135px;
+      height: 3px;
+      background:chocolate;
+      position: absolute;
+      top: 35px;
+      left:72px;
 }
 
-.btn {
-  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+
+/* Layout */
+.content {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 120px;
+  padding-left: 300px;
+  padding-right: 100px;
+}
+
+
+.content h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
   color: #fff;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
 }
 
-.btn:hover {
-  opacity: 0.85;
+.content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 17px;
+  color: #ccc;
 }
 
-/* Right illustration */
-.about-ima {
+.image {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 80vh;
+  margin-left: 50px;
+  margin-top: 100px;
 }
 
-.about-ima img {
-  width: 500px;
-  height: 350px;
+.image img {
+  /* max-width: 200px; */
+  /* border-radius: 10px; */
+  height: 100vh;
+  /* width: 250px; */
+  margin-top: 220px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-sec {
-    flex-direction: column;
-    text-align: center;
-    height:auto;
-  }
-  .about-ima {
-    margin-top: 20px;
-  }
-  .about-con h1::before {
-      content: "";
-      width: 40px;
-      height: 6px;
-      background:#8e2de2;
-      position: absolute;
-      top: 47px;
-      left:auto;
-}
-}
 
 /* <==============================next section=====================> */
 
@@ -102,7 +84,7 @@
   text-align: center;
   /* padding: 80px 20px; */
   background-color:black;
-  height: 120vh;
+  height: 80vh;
   width: 100%;
 }
 .ios-title {
@@ -123,20 +105,75 @@
 }
 
 .devices {
-  height: 40vh;
-  width: 90px;
-  margin-top: 260px;
-  /* display: flex; */
-  justify-content: center;
-  gap: 60px;
-  font-weight:lighter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
 }
-.device img{
+
+.devices img {
   max-width: 100%;
-  width:20px;
   height: auto;
+}
+
+/* .cardbord{
+  max-width: 100%;
+  width:120px;
+  height: 90px;
+  padding-top: 50px;
   
 }
+.mobile{
+  max-width: 100%;
+  width:120px;
+  height: 90px;
+  padding-top: 50px;
+}
+.laptop{
+  max-width: 100%;
+  width:100px;
+  height: 290px;
+  padding-top: 50px;
+  margin-left:300px ;
+}
+.computer{
+  max-width: 100%;
+  width:520px;
+  height: 390px;
+  padding-top: 80px;
+  margin-left: 500px;
+}
+.tablet{
+  max-width: 100%;
+  width:120px;
+  height: 90px;
+  padding-top: 50px;
+}
+.tv{
+  max-width: 100%;
+  width:120px;
+  height: 90px;
+  padding-top: 50px;
+}
+.watch{
+  max-width: 100%;
+  width:120px;
+  height: 90px;
+  padding-top: 50px
+
+}  */
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px){
   .ios-title {
     font-size: 60px;
