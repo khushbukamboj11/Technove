@@ -100,7 +100,7 @@
 /* <=======================Next==================> */
   .work-section {
     /* width: 1200px; */
-  height: 900px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -229,7 +229,7 @@ h1 .gradient {
   }
 }
 
-.circle-container {
+/* .circle-container {
   position: relative;
   width: 600px;
   height: 600px;
@@ -269,24 +269,32 @@ h1 .gradient {
   display: block;
 }
 
-/* Circle positions */
+
 .item1 { top: 15%; left: 30%; }
 .item2 { top: 20%; left: 75%; }
 .item3 { top: 50%; left: 90%; }
 .item4 { top: 75%; left: 75%; }
 .item5 { top: 92%; left: 45%; }
 .item6 { top: 75%; left: 10%; }
-.item7 { top: 40%; left: -2%; }
+.item7 { top: 40%; left: -2%; } */
 
 .page {
-      display: none; /* Hide all pages */
+      display: none; 
       padding: 20px;
-      /* border: 2px solid black; */
       margin-top: 10px;
     }
     .active {
       display: block; /* Show only active page */
+      /* background-color: lightpink; */
+      /* color: white; */
+      
     }
+    .btn button:focus,
+    .btn button.active {
+      background: lightpink;   /* highlight color */
+      color: #fff;
+      outline: none;
+}
     .btn{
       display: flex;
 
@@ -297,17 +305,26 @@ h1 .gradient {
       cursor: pointer;
       border-radius: 15px;
     }
-    button:hover{
+    button:focus{
       color:white;
       background-color: lightpink;
     }
+  .page img{
+    width: 500px;
+    height: 400px;
+    margin-top: 60px;
+  }
+  .page h2{
+    color:rgb(134, 109, 156);
+    font-size: 1.5rem;
+  }
     
 
 
 
-.team-section {
+/* .team-section {
   text-align: center;
-  /* height: 30vh; */
+   height: 30vh; 
   margin-bottom: 160px;
 }
 
@@ -377,7 +394,6 @@ h1 .gradient {
   font-weight: bold;
 }
 
-/* Positioning around the circle */
 .top-right {
   top: 40px;
   right: 70px;
@@ -396,9 +412,9 @@ h1 .gradient {
 .top-left {
   top: 40px;
   left: 70px;
-}
+} */
 
-/* Responsive (stack on small screens) */
+/* 
 @media (max-width: 768px) {
   .circle-container {
     width: 100%;
@@ -419,140 +435,22 @@ h1 .gradient {
  }
  @media (max-width: 480px) {
   .circle-container {
-    padding: 15px 10px;      /* tighter padding */
+    padding: 15px 10px;      
   }
 
   .center-text {
-    font-size: 1.2rem;       /* smaller text */
+    font-size: 1.2rem;       
     margin-bottom: 15px;
     text-align: center;
   }
 
   .circle-item {
-    margin: 10px 0;          /* reduce spacing */
-    font-size: 0.9rem;       /* adjust size if text/icons inside */
-  }
-}
-
-.capabilities {
-  height:80vh;
-  text-align: center;
-  /* padding: 50px 20px; */
-  /* max-width: 1100px; */
-}
-
-.capabilities h1 {
-  font-size: 2.5rem;
-  /* margin-bottom: 40px; */
-  font-weight: bold;
-  /* padding-top: 200px; */
-  margin-top:20px ;
-}
-
-.capabilities h1 span {
-  background: linear-gradient(90deg, #a200ff, #ff4d6d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    margin: 10px 0;         
+    font-size: 0.9rem;      */
+  /* } */
+/* } */
 
 
-.capability-grid {
-  display: grid;
-  /* display: flex; */
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap:10px;
-  /* margin-bottom: 20px; */
-  margin-top: 80px;
-  
-}
-
-.card-p {
-  /* width:280px; */
-  /* height: 180px; */
-  margin-left: 60px;
-  margin-right: 60px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 20px 10px;
-  text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* .card-p:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-} */
-
-
-.card-p h2 {
-  font-size: 1.3rem;
-  /* margin-bottom: 15px; */
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.icon-s {
-  font-size: 2rem;
-}
-@media (max-width: 768px) {
-  .capabilities {
-    height: auto;                /* Remove fixed height */
-    padding: 40px 15px;          /* Add breathing space */
-  }
-
-  .capabilities h1 {
-    font-size: 2rem;             /* Reduce heading size */
-  }
-
-  .capability-grid {
-    grid-template-columns: 1fr;  /* Single column layout */
-    margin-top: 40px;
-    gap: 20px;
-  }
-
-  .card-p {
-    margin: 0 auto;              /* Center cards */
-    width: 90%;                  /* Fit screen width */
-  }
-
-  .card-p h2 {
-    font-size: 1.1rem;           /* Slightly smaller text */
-  }
-
-  .icon-s {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 480px) {
-  .capabilities {
-    padding: 20px 10px;         /* Reduce padding */
-  }
-
-  .capabilities h1 {
-    font-size: 1.6rem;          /* Smaller heading */
-  }
-
-  .capability-grid {
-    margin-top: 25px;
-    gap: 15px;
-  }
-
-  .card-p {
-    width: 100%;                /* Use full width */
-    padding: 15px;              /* Compact padding */
-    margin: 0;                  /* Remove extra margins */
-  }
-
-  .card-p h2 {
-    font-size: 1rem;
-  }
-
-  .icon-s {
-    font-size: 1.5rem;
-  }
-}
 
 /* <===============================cards======================> */
 
