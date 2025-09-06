@@ -1,5 +1,3 @@
-
-
 .container {
   background: black;
   padding: 30px;
@@ -7,32 +5,24 @@
   height: 110vh;
   display: flex;
 }
-/* Layout */
 .content {
-  /* display: flex; */
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   margin-top: 120px;
-  /* padding-left: 300px; */
-  /* padding-right: 100px; */
   width: 50%;
 }
-
-
 .content h2 {
   font-size: 30px;
   margin-bottom: 15px;
   color: #fff;
 }
-
 .content p {
   margin-bottom: 15px;
   line-height: 1.6;
   font-size: 19px;
   color: #ccc;
 }
-
 .image {
   flex: 1;
   display: flex;
@@ -40,20 +30,74 @@
   align-items: center;
   width: 50%;
   height: 80vh;
-  /* margin-left: 50px; */
   margin-top: 20px;
   padding-right: 70px;
 }
 
 .image img {
-  /* max-width: 200px; */
-  /* border-radius: 10px; */
   height: 70vh;
   margin-top:100px;
 }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    padding-right: 0;
+  }
+
+  .image img {
+    width: 80%;
+    height: auto;
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .content {
+    margin-top: 20px;
+    padding: 0 10px;          /* add side padding for readability */
+  }
+
+  .content h2 {
+    font-size: 20px;          /* smaller heading */
+  }
+
+  .content p {
+    font-size: 14px;          /* smaller text */
+    line-height: 1.4;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .image img {
+    width: 100%;              /* full width image on mobile */
+  }
+}
 
 
-/* <=======================next==================> */
+/* <=======================Next==================> */
   .work-section {
     /* width: 1200px; */
   height: 1200px;
@@ -129,18 +173,62 @@ h1 .gradient {
   margin-top: 40px;
   color: #222;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
+  .work-section {
+    height: auto;              /* Remove fixed height */
+    border-radius: 0;          /* Remove circle shape on small screens */
+    padding: 40px 20px;        /* Add spacing */
   }
+
+  h1 {
+    font-size: 28px;           /* Reduce heading size */
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 20px;           /* Smaller subtitle */
+    margin-top: 25px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;           /* Tabs wrap into new line */
+    justify-content: center;
+    margin: 20px 0;
+  }
+
   .tab {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
+    padding: 10px 18px;
+    font-size: 14px;
+    margin: 5px;
   }
 }
+@media (max-width: 480px) {
+  .work-section {
+    padding: 25px 15px;       /* tighter spacing */
+  }
+
+  h1 {
+    font-size: 22px;          /* smaller heading */
+  }
+
+  .subtitle {
+    font-size: 16px;          /* shrink subtitle */
+    margin-top: 20px;
+  }
+
+  .tabs {
+    flex-direction: column;   /* stack tabs vertically */
+    gap: 10px;
+  }
+
+  .tab {
+    width: 100%;              /* full width buttons */
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+}
+
 .circle-container {
   position: relative;
   width: 600px;
@@ -209,6 +297,23 @@ h1 .gradient {
     margin: 15px 0;
   }
  }
+ @media (max-width: 480px) {
+  .circle-container {
+    padding: 15px 10px;      /* tighter padding */
+  }
+
+  .center-text {
+    font-size: 1.2rem;       /* smaller text */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .circle-item {
+    margin: 10px 0;          /* reduce spacing */
+    font-size: 0.9rem;       /* adjust size if text/icons inside */
+  }
+}
+
 .capabilities {
   height:80vh;
   text-align: center;
@@ -271,6 +376,64 @@ h1 .gradient {
 .icon-s {
   font-size: 2rem;
 }
+@media (max-width: 768px) {
+  .capabilities {
+    height: auto;                /* Remove fixed height */
+    padding: 40px 15px;          /* Add breathing space */
+  }
+
+  .capabilities h1 {
+    font-size: 2rem;             /* Reduce heading size */
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;  /* Single column layout */
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .card-p {
+    margin: 0 auto;              /* Center cards */
+    width: 90%;                  /* Fit screen width */
+  }
+
+  .card-p h2 {
+    font-size: 1.1rem;           /* Slightly smaller text */
+  }
+
+  .icon-s {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .capabilities {
+    padding: 20px 10px;         /* Reduce padding */
+  }
+
+  .capabilities h1 {
+    font-size: 1.6rem;          /* Smaller heading */
+  }
+
+  .capability-grid {
+    margin-top: 25px;
+    gap: 15px;
+  }
+
+  .card-p {
+    width: 100%;                /* Use full width */
+    padding: 15px;              /* Compact padding */
+    margin: 0;                  /* Remove extra margins */
+  }
+
+  .card-p h2 {
+    font-size: 1rem;
+  }
+
+  .icon-s {
+    font-size: 1.5rem;
+  }
+}
+
 
 
 
@@ -315,8 +478,59 @@ h1 .gradient {
 }
 
 .device.desktop {
-  height: 240px;   /* bigger size for iMac */
-} */
+  height: 260px;   /* bigger size for iMac */
+} 
+@media (max-width: 768px) {
+  .ios-section {
+    height: auto;               /* Let content adjust */
+    padding: 40px 15px;
+  }
+
+  .ios-title {
+    font-size: 50px;            /* Reduce big heading */
+    padding-top: 20px;
+  }
+
+  .devices-1 {
+    display: flex;              /* Keep flexbox */
+    flex-wrap: wrap;            /* Wrap devices */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .device.small {
+    height: 120px;              /* Shrink small device */
+  }
+
+  .device.desktop {
+    height: 180px;              /* Shrink desktop */
+  }
+}
+@media (max-width: 480px) {
+  .ios-section {
+    padding: 20px 10px;
+  }
+
+  .ios-title {
+    font-size: 32px;       /* Smaller heading for phones */
+    padding-top: 10px;
+  }
+
+  .devices-1 {
+    flex-direction: column; /* Stack devices vertically */
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .device.small {
+    height: 90px;          /* Smaller device size */
+  }
+
+  .device.desktop {
+    height: 140px;         /* Smaller desktop size */
+  }
+}
 
 
 
@@ -358,13 +572,11 @@ h1 .gradient {
 }
 
 .card {
-  /* background: linear-gradient(180deg, #0288d1, #26c6da); */
   background-color:#1f2937;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s;
-  /* position: relative; */
 }
 .card:nth-child(odd) {
   background-color:#007db2;  
@@ -373,12 +585,6 @@ h1 .gradient {
 .card:nth-child(even) {
   background-color:#084766; 
 }
-
-
-/* .card:hover {
-  transform: translateY(-8px);
-} */
-
 .card h2 {
   margin: 10px 0 10px;
   font-size: 20px;
@@ -386,15 +592,6 @@ h1 .gradient {
   color: white;
   position: relative;
 }
-/* .card h2::before {
-  content: "";
-  width: 140px;
-  height: 1.5px;
-  background: white;
-  position: absolute;
-  top: 23px;
-  left:53px;
-} */
 
 
 .card p {
@@ -402,8 +599,6 @@ h1 .gradient {
   line-height: 1.6;
   color: white;
 }
-
-/* Icon Circle with Flip */
 .icon-wrapper {
   width: 100px;
   height: 100px;
@@ -468,6 +663,105 @@ h1 .gradient {
 .icon-back {
   transform: rotateY(180deg);
 }
+@media (max-width: 768px) {
+  .industry-section {
+    height: auto;                 /* Remove fixed height */
+    padding: 20px 15px;
+  }
+
+  .industry-section h1 {
+    font-size: 1.6rem;            /* Smaller heading */
+    margin-bottom: 40px;
+  }
+
+  .industry-section h1::before {
+    left: 50%;                    /* Center underline */
+    top: 65px;
+    transform: translateX(-50%);
+    width: 40px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;   /* Single column on tablets */
+    height: auto;                 /* Remove fixed height */
+    gap: 25px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-inner img {
+    width: 50px;
+  }
+
+  .icon-front,
+  .icon-back {
+    max-width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .industry-section {
+    padding: 15px 10px;
+  }
+
+  .industry-section h1 {
+    font-size: 1.3rem;        /* Smaller heading for mobile */
+    margin-bottom: 25px;
+  }
+
+  .industry-section h1::before {
+    top: 68px;
+    width: 30px;              /* Thinner underline */
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-inner img {
+    width: 40px;
+  }
+
+  .icon-front,
+  .icon-back {
+    max-width: 65px;
+    height: 65px;
+  }
+}
 
 
 
@@ -478,7 +772,7 @@ h1 .gradient {
 
 .container-2{
   max-width: 1200px;
-  height: 237vh;
+  height: 245vh;
   margin: auto;
   padding: 40px 20px;
   text-align: center;
@@ -553,9 +847,6 @@ p.subtitle {
 .step-number {
   font-size: 60px;
   font-weight: bold;
-  /* margin-bottom: 10px; */
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 .step-card:nth-child(1) .step-number {
@@ -590,33 +881,11 @@ p.subtitle {
   color: #555;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .step-content {
-    flex-direction: column;
-  }
 
-  .divider {
-    display: none;
-  }
-
-  .left {
-    padding-right: 0;
-    margin-bottom: 15px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .step-number {
-    font-size: 32px;
-  }
-}
 @media(max-width:768px){
   .container-2{
   max-width: 1200px;
-  height: 510vh;
+  height: 470vh;
   margin: auto;
   padding: 40px 20px;
   text-align: center;
@@ -726,179 +995,51 @@ p.subtitle {
   color: #555;
 }
 }
-@media(max-width:480px){
-  .container-2{
-  max-width: 500px;
-  height: 655vh;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-p.subtitle {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.step-card {
-  height: 520px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.step-card:hover {
-  transform: translateY(-5px);
-}
-
-.step-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.left {
-  flex: 1;
-  padding-right: 20px;
-  /* align-items: center; */
-  justify-content: center;
-}
-
-.divider {
-  width: 1px;
-  background: #ddd;
-  height: 100%;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right img {
-  max-width: 110%;
-  height: 30vh;
-  border-radius: 6px;
-}
- 
-.step-number {
-  font-size: 60px;
-  font-weight: bold;
-  /* margin-bottom: 10px; */
-  /* align-items: center; */
-  /* justify-content: center; */
-}
-
-.step-card:nth-child(1) .step-number {
-  color: #ff5722; /* Orange for Step 1 */
-}
-
-.step-card:nth-child(2) .step-number {
-  color: #009688; /* Green for Step 2 */
-}
-.step-card:nth-child(3) .step-number {
-  color: rgb(134, 6, 28); /* Green for Step 2 */
-}
-.step-card:nth-child(4) .step-number {
-  color:darkturquoise; /* Green for Step 2 */
-}
-.step-card:nth-child(5) .step-number {
-  color: rgb(233, 115, 233); /* Green for Step 2 */
-}
-.step-card:nth-child(6) .step-number {
-  color: rgb(64, 64, 235); /* Green for Step 2 */
-}
-
-.step-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.step-desc {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
-}
-
-}
-
-
-
-
-
-/* .ios-hero {
-  background: #181828;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.ios-heading h1 {
-  font-size: 7vw;
-  font-family: 'Inter', Arial, sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.ios-gradient {
-  background: linear-gradient(90deg, #ffb347, #ff5c91, #6dcfff, #44ff8f 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.devices-row {
-  display: flex;
-  gap: 48px;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  width: 90vw;
-  max-width: 1200px;
-  margin-bottom: 10vh;
-}
-
-/* Responsive scaling for devices */
-.devices-row svg {
-  display: block;
-  max-width: 150px;
-  width: 12vw;
-  height: auto;
-  min-width: 60px;
-}
-
-/* Optional: For very small screens */
-@media (max-width: 600px) {
-  .ios-heading h1 {
-    font-size: 11vw;
-    margin-bottom: 24px;
+@media (max-width: 480px) {
+  .container-2 {
+    height: auto;               /* Let height adjust naturally */
+    padding: 20px 10px;
   }
-  .devices-row {
-    gap: 18px;
-    margin-bottom: 6vh;
+
+  h1 {
+    font-size: 28px;            /* Smaller heading */
   }
-} */
+
+  p.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px;
+  }
+
+  .step-card {
+    height: auto;               /* Flexible height */
+    padding: 15px;
+  }
+
+  .step-number {
+    font-size: 36px;            /* Smaller step number */
+  }
+
+  .step-title {
+    font-size: 20px;            /* Smaller title */
+  }
+
+  .step-desc {
+    font-size: 14px;            /* Smaller text */
+    line-height: 1.4;
+  }
+
+  .right img {
+    max-width: 90%;             /* Image fits mobile */
+    height: auto;
+  }
+}
+
+
+
+
+
