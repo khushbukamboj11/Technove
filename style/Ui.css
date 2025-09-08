@@ -1,0 +1,263 @@
+.container {
+    max-width: 100%;
+    height: 130vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ .container h1 {
+    font-size: 49px;
+    font-weight:900;
+    margin-bottom: 10px;
+    margin-top:30px;
+}
+
+.container p{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    color:rgb(49, 48, 48);
+   
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 60px 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    flex: 1 1 350px; /* allow flexible width and wrap */
+    max-height: 100px;
+}
+
+.card.expanded {
+    max-height: 500px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header img {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.card-header h3 {
+    margin: 0 10px;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.plus {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.card.expanded .plus {
+    transform: rotate(45deg);
+}
+
+.card-content {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 0;
+}
+
+.card.expanded .card-content {
+    opacity: 1;
+    max-height: 200px;
+}
+
+/* <=============================Next-1==============================?> */
+
+.next {
+    max-width: 100%;
+    height: 150vh;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(203, 212, 215);
+}
+
+.next h1 {
+    font-size: 49px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+.next p {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #101010;
+}
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    /* background-color: #fff; */
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 30px;
+    position: relative;
+    text-align: left;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    font-weight:bolder;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    /* border: 2px solid ; */
+    box-shadow: #afc9e5 0px 0px 0px 6px;
+}
+.step-content img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.step-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+
+.step-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* .step:nth-child(1)::after,
+.step:nth-child(2)::after,
+.step:nth-child(4)::after,
+.step:nth-child(5)::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color:black;
+    top: 50%;
+    right: -40px;
+}
+
+.step:nth-child(1)::after {
+    top: 50%;
+    right: -40px;
+}
+
+.step:nth-child(2)::after {
+    top: 50%;
+    right: -40px;
+}
+
+.step:nth-child(4)::after {
+    top: 50%;
+    right: -40px;
+}
+
+.step:nth-child(5)::after {
+    top: 50%;
+    right: -40px;
+}
+
+
+.step:nth-child(3)::after,
+.step:nth-child(6)::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: black;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* <==================================Next-2====================================> */
+.next-2{
+     max-width: 100%;
+    height: 150vh;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f5f5;
+
+}
+.next-2 h1{
+    font-size: 49px;
+    font-weight:900;
+    margin-bottom: 10px;
+    /* margin-top:30px; */
+}
+.next-2 p{
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #101010;
+}
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* gap: 20px; */
+    justify-items: center;
+}
+
+.element {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+
+
+.element img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.element h4 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
