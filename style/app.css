@@ -456,7 +456,7 @@ h1 .gradient {
 
 
 .industry-section {
-  height: 190vh;
+  height: 180vh;
   text-align: center;
   padding: 30px 20px;
   background:linear-gradient(to bottom,#111827, #1f2937);
@@ -484,7 +484,7 @@ h1 .gradient {
   gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
-  height: 160vh;
+  height: 150vh;
   position: relative;
 }
 
@@ -504,7 +504,7 @@ h1 .gradient {
 }
 .card h2 {
   margin: 10px 0 10px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
   color: white;
   position: relative;
@@ -512,8 +512,8 @@ h1 .gradient {
 
 
 .card p {
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.8;
   color: white;
 }
 .icon-wrapper {
@@ -689,7 +689,7 @@ h1 .gradient {
 
 .container-2{
   max-width: 1200px;
-  height: 240vh;
+  height: 210vh;
   margin: auto;
   padding: 40px 20px;
   text-align: center;
@@ -715,7 +715,7 @@ p.subtitle {
 }
 
 .step-card {
-  height: 400px;
+  height: 390px;
   background: #fff;
   border-radius: 10px;
   padding: 20px;
