@@ -11,10 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/about.css" />
+    <!-- <link rel="stylesheet" href="./style/style.css" /> -->
+    <!-- <link rel="stylesheet" href="./style/about.css" /> -->
     <link rel="stylesheet" href="./style/career.css" />
-    <link rel="stylesheet" href="./style/service.css" />
+    <!-- <link rel="stylesheet" href="./style/service.css" /> -->
     <link rel="stylesheet" href="./style/erp.css" />
 
     <style>
@@ -184,158 +184,111 @@
       </div>
     </div>
 
-    <section class="main-section">
-      <div class="main-section-container">
-        <!-- Right Image Content -->
-        <div class="main-image-content">
-          <img
-            src="./assets/imgaes/ChatGPT Image Aug 26, 2025, 05_38_19 PM.png"
-            alt="Erp Design"
-          />
+    <div class="erp-section">
+    <h1>ERP Consulting</h1>
+    <h2>Customized to Your Industry</h2>
+    <p>Our ERP consultants customize our consulting approach to your specific industry. We factor in the unique challenges and opportunities you face. Here’s how we can help you in your specific industry.</p>
+
+    <div class="content-container-1">
+        <div class="sidebar">
+            <ul>
+                <li data-tab="ecommerce" class="active">E-Commerce & Retail</li>
+                <br>
+                <li data-tab="manufacturing">Manufacturing</li>
+                <br>
+                <li data-tab="healthcare">Healthcare</li>
+                <br>
+                <li data-tab="finance">Finance</li>
+                <br>
+                <li data-tab="construction">Construction</li>
+            </ul>
         </div>
-        <!-- Left Text Content -->
-        <div class="text">
-          <br>
-          <div class="service-cards-grid">
-          <div class="service-card" style="border-top: 5px solid #63b3ed">
-            <h2>
-            Empower Your Business with a Smarter ERP Solution
-          </h2>
-            <h3 style="font-family: Arial, Helvetica, sans-serif;">"Streamline operations, boost productivity, and make data-driven decisions with ease."</h3>
-            <br>
-            
-            <p>
-              Our ERP system is designed to bring every part of your business together finance, HR, sales, inventory, supply chain, and more into a single, integrated solution. With powerful automation, seamless workflows, and detailed analytics, you’ll save time, reduce costs, and make data-driven decisions with confidence.Whether you’re a growing startup or a large enterprise, our ERP platform adapts to your needs, helping you stay organized, improve productivity, and scale your business effortlessly.
-            </p>
-            <br>
+
+        <div class="main-content">
+            <img id="industry-image" src="./assets/imgaes/ecommerce.jpg" alt="Industry Image" />
+            <ul id="industry-text">
+                <li data-tab="ecommerce" class="active">
+                    <ul>
+                        <li>We focus on an omnichannel strategy so you have a single source of truth for inventory across all channels.</li>
+                        <li>We help you select & implement ERPs that can seamlessly integrate with multiple sales channels, like Shopify, Amazon, etc.</li>
+                        <li>We help you design and implement customer-friendly returns and reverse logistics workflows within your ERP.</li>
+                    </ul>
+                </li>
+
+                <li data-tab="manufacturing">
+                    <ul>
+                        <li>Optimize production scheduling and improve resource utilization with our tailored ERP solutions for manufacturing.</li>
+                        <li>Integrate supply chain management to ensure timely deliveries and reduce operational downtime.</li>
+                        <li>Streamline quality control processes to ensure consistent product standards.</li>
+                    </ul>
+                </li>
+
+                <li data-tab="healthcare">
+                    <ul>
+                        <li>Improve patient care by integrating medical records and workflows across departments.</li>
+                        <li>Manage staff scheduling and compliance more efficiently through real-time analytics.</li>
+                        <li>Enhance supply chain management for medical equipment and pharmaceuticals.</li>
+                    </ul>
+                </li>
+
+                <li data-tab="finance">
+                    <ul>
+                        <li>Centralize financial reporting to give leadership real-time insights into cash flow and investments.</li>
+                        <li>Automate budgeting and forecasting processes using data-driven models.</li>
+                        <li>Improve compliance and risk management with integrated auditing tools.</li>
+                    </ul>
+                </li>
+
+                <li data-tab="construction">
+                    <ul>
+                        <li>Streamline project management with integrated timelines, budgets, and resource allocation.</li>
+                        <li>Improve communication across teams, suppliers, and clients with centralized dashboards.</li>
+                        <li>Track equipment usage and maintenance schedules to reduce downtime and cost.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-      </div>
-    </section>
+    </div>
+</div>
 
 
 
-  
 
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.sidebar li');
+    const textItems = document.querySelectorAll('#industry-text > li');
+    const image = document.getElementById('industry-image');
 
-    <div class="excites-us-section-container">
-      <!-- Left Column: Main Text Content -->
-      <div class="excites-us-text-column">
-        <h2 class="excites-us-main-heading">How Our ERP System Works?</h2>
-        <p>
-          Managing multiple business functions separately often leads to errors,
-          delays, and confusion. Our ERP system solves this by bringing
-          everything into one connected platform. From finance and HR to sales,
-          inventory, and customer management — all departments share the same
-          real-time data. Our ERP system connects every part of your business in
-          one easy-to-use platform. With real-time dashboards, smart automation,
-          and role-based access, your team works faster, makes better decisions,
-          and reduces errors. Whether it’s creating orders, managing stock, or
-          processing payroll, everything flows seamlessly in one place.
-        </p>
-      </div>
+    const images = {
+        ecommerce: './assets/imgaes/ecommerce.jpg',
+        manufacturing: './assets/imgaes/manu-1.jpg',
+        healthcare: './assets/imgaes/health.png',
+        finance: './assets/imgaes/fin.jpg',
+        construction: './assets/imgaes/construction.jpg'
+    };
 
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const section = document.querySelector(
-            ".excites-us-section-container"
-          );
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active state from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            textItems.forEach(item => item.classList.remove('active'));
 
-          const observer = new IntersectionObserver(
-            (entries, observer) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  section.classList.add("visible"); // triggers heading & paragraph animation
-                  observer.unobserve(section); // animate once
-                }
-              });
-            },
-            { threshold: 0.3 }
-          );
+            // Add active state to the clicked tab
+            tab.classList.add('active');
 
-          observer.observe(section);
+            // Show corresponding text
+            const tabName = tab.getAttribute('data-tab');
+            document.querySelector(`#industry-text li[data-tab="${tabName}"]`).classList.add('active');
+
+            // Change image
+            image.src = images[tabName];
         });
-      </script>
+    });
+});
 
-      <!-- Right Column: Image -->
-      <div class="excites-us-image-column">
-        <img
-          src="./assets/imgaes/Gemini_Generated_Image_jnghq1jnghq1jngh.png"
-          alt="What Excites Us"
-        />
-      </div>
-    </div>
+</script>
 
-
-
-    <section class="features-list">
-  <div class="container">
-    <h2 class="section-title">Our Key Features</h2>
-    <p class="section-subtitle">Everything You Need, All in One ERP</p>
-    
-    <div class="feature">
-      <img
-                src="./assets/icons/ChatGPT Image Aug 26, 2025, 07_10_03 PM.png"
-                alt="finance & accounting"
-              />
-      <div>
-        <h3>finance & accounting</h3>
-        <p>Take full control of your business finances with real-time accuracy and automation. From managing invoices and payments to handling tax compliance and financial reporting, our Finance & Accounting module keeps everything transparent and error-free.</p>
-      </div>
-    </div>
-
-    <div class="feature">
-      <img
-                src="./assets/icons/ChatGPT Image Aug 26, 2025, 07_14_24 PM.png"
-                alt="HR & Payroll Icon"
-              />
-      <div>
-        <h3>HR & Payroll</h3>
-        <p>Manage your workforce effortlessly with a complete HR and payroll system. From attendance tracking to salary processing, everything is smooth and accurate</p>
-      </div>
-    </div>
-
-    <div class="feature">
-       <img
-                src="./assets/icons/ChatGPT Image Aug 26, 2025, 07_19_14 PM.png"
-                alt="Inventory Management Icon"
-              />
-      <div>
-        <h3>Inventory Management</h3>
-        <p>  Track, manage, and optimize your stock across multiple locations. Stay updated with real-time inventory levels, avoid stockouts, and reduce excess storage costs.</p>
-      </div>
-    </div>
-
-    <div class="feature">
-      <img src="./assets/icons/ChatGPT Image Aug 26, 2025, 07_28_49 PM.png" alt="Sales & CRM Icon" />
-      <div>
-        <h3>Sales & CRM</h3>
-        <p>Boost customer relationships and close deals faster with an integrated sales and CRM system. Manage leads, orders, and invoices — all in one place.</p>
-      </div>
-    </div>
-
-    <div class="feature">
-      <img
-                src="./assets/icons/Gemini_Generated_Image_ppi8x9ppi8x9ppi8.png"
-                alt="Project Management Icon"
-              />
-      <div>
-        <h3>Project Management</h3>
-        <p>Plan, track, and deliver projects on time with complete visibility. From task assignments to progress tracking and resource allocation, manage everything in one place for maximum efficiency.</p>
-      </div>
-    </div>
-
-    <div class="feature">
-      <img
-                src="./assets/icons/Gemini_Generated_Image_ycey2yycey2yycey.png"
-                alt="Real Time Reporting Icon"
-              />
-      <div>
-        <h3>Real Time Reporting</h3>
-        <p>Make faster, smarter decisions with instant access to accurate data. Our reporting tools provide live dashboards and analytics so you can track performance across every department in real time.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
     <footer class="footer">
