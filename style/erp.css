@@ -1,9 +1,94 @@
 
+.container {
+    max-width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    font-size: 50px;
+}
+
+
+.content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* gap: 40px; */
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width: 55%;
+    /* text-align: center; */
+}
+.text {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* <=================================planning===================================> */
+
+.container-1 {
+    max-width: 1050px;
+    height: 100vh;
+    margin-right:50px;
+    position: relative; /* Needed for absolute positioning of image */
+    display: flex;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: visible; /* Allow image to overflow outside */
+}
+
+.planning {
+    flex: 1;
+}
+
+.planning h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.planning p {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-right: 250px;
+    margin-right: 50px;
+}
+
+.erp-image {
+    position: absolute;
+    top: 50%;
+    right: -275px; /* Move half the image width outside */
+    transform: translateY(-50%);
+}
+
+.erp-image img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* <====================================erp section===============================> */
 .erp-section {
     max-width: 100%;
     height: 110vh;
     margin: auto;
-    /* background-color: aqua; */
 }
 
 .erp-section h1 {
@@ -81,14 +166,7 @@
     margin-top: 20px;
 }
 
-/* .main-content ul li {
-    display: none;
-}
 
-.main-content ul li.active {
-    display: block;
-} */
-/* Hide all first-level li elements under #industry-text */
 #industry-text > li {
     display: none;
     font-size: 25px;
@@ -98,9 +176,85 @@
     padding-right: 30px;
     color: #333;
 }
-
-/* Show the active one */
 #industry-text > li.active {
     display: block;
 }
+/* <=====================================next page==================================> */
+
+.erp-section-1 {
+    max-width: 100%;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.erp-section-1 h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #1a237e;
+}
+
+.erp-section-1 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.content-container-2{
+    display: flex;
+}
+
+.features {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature-item {
+    height: 25vh;
+    display: flex;
+    align-items: flex-start;
+    background-color:white;
+    border-radius: 8px;
+    padding-right: 50px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a237e;
+    margin-right: 20px;
+}
+
+.feature-content h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.feature-content p {
+    font-size: 25px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+.image-erp {
+    /* flex: 1; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.image-erp img {
+    /* max-width: 50%; */
+    width: 550px;
+    height: auto;
+    border-radius: 8px;
+}
+
 
