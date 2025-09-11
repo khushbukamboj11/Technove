@@ -294,7 +294,7 @@
             Businesses choose our custom ERP software development services because we are building something for them, not asking them to mold operations around a product. We have team members with expertise transforming modular, scalable ERP software into unique workflows. With end-to-end services, secure coding practices, or third party plug-ins, we offer customized ERP software development with measurable business value.
         </p>
       <div class="content-container-2">
-        <div class="features">
+        <div class="features-1">
             <div class="feature-item">
                 <div class="number">01</div>
                 <div class="feature-content">
@@ -368,6 +368,108 @@
 });
 
 </script>
+<!-- <==============================final section====================================> -->
+
+
+
+    <div class="container-3">
+        <h1>Key Features We Can Build into Your Custom <br>ERP System</h1>
+        <p class="description">
+            We offer robust Custom ERP Software Development Services tailored to your workflows. From automated approvals to advanced reporting and role based access, we develop features to make complex processes easier. Each and every module enhances visibility, minimizes manual errors and improves the speed of decisions.
+        </p>
+
+        <div class="slider-container">
+            <div class="features" id="features">
+                <div class="feature-card-1">
+                    <div class="feature-icon blue">
+                      <img src="./assets/icons/real.webp">
+                    </div>
+                    <h3>Real-Time Inventory Tracking</h3>
+                    <p>
+                        Be able to track stock levels, item movements and warehouse activities in real time, receive instant alerts on low inventory, manage multiple locations and reduce stock-outs. Our ERP systems enable inventory data accuracy so that it is consistent across all departments.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon red">
+                      <img src="./assets/icons/finance icon.webp">
+                    </div>
+                    <h3>Automated Accounting & Finance</h3>
+                    <p>
+                        Automate general ledgers, balance sheets, invoicing and expense reports. Streamline cash flow, tax compliance, and multi-currency processes. Achieve updated financial insights that are error free and related to your company’s growing goals.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon yellow">
+                      <img src="./assets/icons/payroll-1.webp">
+                    </div>
+                    <h3>HR & Payroll Management</h3>
+                    <p>
+                        Manage employee info, attendance, leave policies, payroll, and compliance in one central place. Automate employees salary disbursements, generate payslips and comply with a standardized way to report to tax authorities. Allow your staff to increase productivity by utilizing self-service employee portals.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon green">
+                      <img src="./assets/icons/crm-2.webp">
+                    </div>
+                    <h3>CRM & Customer Engagement Tools</h3>
+                    <p>
+                        Track client data, manage leads, automate follow-up, and improve service delivery. Our CRM tool that is integrated into your ERP, provides a 360° view of connections with clients, and helps your team shorten their lead times to convert leads to customers, as well as retain loyalty.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon blue">
+                      <img src="./assets/icons/proce.webp">
+                    </div>
+                    <h3>Procurement & Supply Chain</h3>
+                    <p>
+                       Streamline purchase orders, vendor contracts, and supply chain processes with ease. Automate the procurement cycles, follow requests as they are shipped, and track vendor and supplier performance. Our ERP enables transparency and minimizes delays.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon red">
+                      <img src="./assets/icons/icon.webp">
+                    </div>
+                    <h3>Project & Task Tracking</h3>
+                    <p>
+                        Plan, allocate, and monitor tasks across departments using centralized dashboards. Manage timeline expectations — allocate resources, build deliverables across many projects, and understand the status to keep it all on schedule.
+                    </p>
+                </div>
+                <div class="feature-card-1">
+                    <div class="feature-icon yellow">
+                      <img src="./assets/icons/icon-2.webp"></ing>
+                    </div>
+                    <h3>Advanced Role-Based Access</h3>
+                    <p>
+                        Don’t compromise your information. Lock down your ERP system with role-based access to every user level. Control what users can see or edit and minimize risk by reducing internal access. Provide teams with access to what they need, without compromising security.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button id="prevBtn">&#8592;</button>
+            <button id="nextBtn">&#8594;</button>
+        </div>
+    </div>
+
+    <script>
+      const features = document.getElementById('features');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let index = 0;
+const cardWidth = 420; // card width + gap approx
+
+prevBtn.addEventListener('click', () => {
+    index = Math.max(index - 1, 0);
+    features.style.transform = `translateX(${-cardWidth * index}px)`;
+});
+
+nextBtn.addEventListener('click', () => {
+    index = Math.min(index + 1, features.children.length - 3);
+    features.style.transform = `translateX(${-cardWidth * index}px)`;
+});
+
+    </script>
 
 
 
