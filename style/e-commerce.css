@@ -3,8 +3,7 @@
             align-items: center;
             justify-content: center;
             padding: 60px 20px;
-            gap: 40px;
-            max-width: 1200px;
+            max-width: 100%;
             margin: auto;
             flex-wrap: wrap;
         }
@@ -20,10 +19,11 @@
         .text-container {
             flex: 1;
             min-width: 300px;
+            padding-right: 70px;
         }
         .text-container h1 {
             color: #00bfa5;
-            font-size: 40px;
+            font-size: 39px;
             font-weight: 900;
             margin-bottom: 20px;
         }
@@ -124,28 +124,29 @@
 .container-1 {
     max-width: 100%;
     margin: auto;
-    /* background-color: lightblue; */
     padding: 20px;
 }
 
 .text {
     display: flex;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
+
 .text h1 {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
     padding-top: 60px;
 }
 
-.text p {
-    font-size: 20px;
-    max-width: 600px;
-    margin-bottom: 40px;
+.text p { 
+    font-size: 20px; 
+    max-width: 800px; 
+    margin-bottom: 40px; 
     padding-top: 90px;
-    margin-left: 300px;
+    padding-left: 250px; 
 }
 
 .timeline {
@@ -222,11 +223,14 @@
 /* <=======================technology==================> */
 
 
+
+
 .technology-stack {
     max-width: 100%;
+    height: 120vh;
     margin: auto;
     text-align: center;
-    background-color:rgb(221, 218, 218);
+    background-color: rgb(221, 218, 218);
 }
 
 .technology-stack h2 {
@@ -246,32 +250,37 @@
     margin-bottom: 30px;
 }
 
-.buttons {
-    justify-content: center;
-    background-color:#084766; 
-    max-width: 50%;
+.section {
+    display: flex;
+    width: 100%;
     height: 100vh;
-    gap: 40px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+}
+
+.buttons {
+    background-color: #084766;
+    width: 50%; 
+    height: 90vh;
+    padding: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    /* margin-right: 100px; */
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .tab-btn {
-    width: 650px;
-    height: 70px;
+    width: 90%;
+    height: 60px;
     border: none;
-    background-color:#084766;
+    background-color: #084766;
     color: white;
     cursor: pointer;
     font-size: 16px;
     border-radius: 10px;
     transition: background-color 0.3s;
     border: #00aaff solid 1px;
-    margin-top: 30px;
 }
 
 .tab-btn.active {
@@ -279,26 +288,22 @@
     color: white;
 }
 
-.section {
-    display: flex;
-    
-}
-.half{
-    justify-content: center;
-    background-color:white; 
-    max-width: 50%;
-    height: 100vh;
-    gap: 40px;
-    margin-bottom: 20px;
-    /* margin-left: 20px; */
+.half {
+    background-color: white;
+    width: 50%; 
+    height: 90vh;
+    padding: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-right: 20px;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
 }
-
 .tab-content {
     display: none;
+    width: 100%;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
@@ -310,14 +315,14 @@
 
 .content-item {
     background-color: white;
-    margin-top: 50px;
     border-radius: 8px;
     padding: 20px;
-    width: 200px;
+    flex: 1 1 calc(33% - 20px); 
+    min-width: 150px; 
+    max-width: 200px; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
 }
-
 .content-item img {
     width: 60px;
     height: 60px;
