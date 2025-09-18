@@ -65,38 +65,39 @@
     }
 }
 @media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
+  .content {
+    flex-direction: column;    /* Stack image and text */
+    padding: 0 10px;
+    text-align: center;
+  }
 
-    .container h1 {
-        font-size: 24px;
-        padding-top: 15px;
-        margin-bottom: 15px;
-    }
+  .image {
+    width: 100%;               /* Fit phone width */
+    margin-bottom: 15px;
+  }
 
-    .content {
-        gap: 15px;
-    }
+  .image img {
+    width: 100%;               /* Scale image to screen */
+    height: auto;              /* Keep aspect ratio */
+  }
 
-    .image {
-        width: 300%;
-        height: auto;
-        /* margin-right: 500px; */
-        /* margin-left: 500px; */
-        
+  .text {
+    width: 100%;
+    padding: 0;                /* Remove side padding */
+  }
 
-    }
+  .container h1 {
+    font-size: 24px;           /* Smaller heading */
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
 
-    .text {
-        width: 100%;
-        padding: 0;
-    }
-
-    .text p {
-        font-size: 14px;
-    }
+  .text p {
+    font-size: 14px;           /* Reduce text size */
+    line-height: 1.4;
+  }
 }
+
 
 
 /* <=================================planning===================================> */
