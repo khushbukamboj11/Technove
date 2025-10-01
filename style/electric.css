@@ -117,13 +117,14 @@
 
     /* <===================================welcome page=======================================> */
     .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  max-width: 1200px;
-  margin: auto;
-  gap: 50px;
+      background-color: rgb(246, 228, 228);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      max-width:100%;
+      margin:auto;
+      gap: 50px;
 }
 
 .image-container {
@@ -136,11 +137,6 @@
   border-radius: 15px;
   display: block;
 }
-
-
-
-
-
 .content {
   flex: 1;
 }
@@ -182,56 +178,56 @@ h1 span {
 /* <==================================why choose=============================================> */
   
 .vision-section {
-  background-color: #e7f5e7;
+  background-color:white ;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 60px 80px;
+  padding: 10px 80px;
   max-width: 100%;
   margin: auto;
   gap: 50px;
 }
-
-
-.left {
-  flex: 1;
-  text-align: left;
+.vision{
+  text-align: center;
 }
-
-.tag {
-  display: inline-block;
-  background: #e7f5e7;
-  color: #222;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  margin-bottom: 15px;
+.both{
+  display: flex;
+  gap: 20px;
 }
 
 .left h1 {
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .target-img {
-  width: 120%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 500px;
+  height: 120vh;
   margin-bottom: 30px;
+  margin-top: 100px;
 }
 
 .right {
   flex: 2;
+  text-align: left;
+  padding-left: 150px;
+  padding-right: 10px;
 
 }
 
-.vision h2,
-.mission h2 {
-  font-size: 30px;
+.vision h2{
+  font-size: 35px;
   color: #222;
   margin-bottom: 15px;
 }
 
+
 .vision p {
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -243,19 +239,6 @@ h1 span {
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 30px;
-}
-
-.number {
-  background: #36b336;
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-  width: 35px;
-  height: 35px;          
-  text-align: center;
-  line-height: 35px;      
-  border-radius: 50%;  
-  flex-shrink: 0;
 }
 
 
@@ -322,16 +305,16 @@ h1 span {
 /* <================================advance feature===================> */
 
 .advance-features-section {
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
     text-align: center;
 }
 
 .section-title {
-  padding-top: 50px;
+  padding-top: 20px;
     font-size: 40px;
     font-weight: 800;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .content-wrapper {
@@ -388,7 +371,7 @@ h1 span {
 }
 
 .triangle-img {
-    width: 90%;
+    width: 80%;
     height: auto;
     object-fit: contain;
 }
@@ -532,8 +515,8 @@ h1 span {
   .txt{
       text-align: center;
       font-size: 20px;
-      padding-left: 300px;
-      padding-right: 300px;
+      padding-left: 160px;
+      padding-right: 160px;
       padding-bottom: 30px;
     }
     .wrapper{
@@ -552,13 +535,13 @@ h1 span {
       text-align: left;
      color: #d62828;
       font-size: 40px;
-      margin-top: 50px;
+      margin-top: 10px;
     }
 
     .text h2 {
-      font-size: 38px;
-      font-weight: 900;
-      margin: 10px 0 20px;
+      font-size: 35px;
+      font-weight: 800;
+      margin: 10px 0 10px;
     }
 
     .text p {
