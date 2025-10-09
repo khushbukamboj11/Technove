@@ -250,17 +250,34 @@ body {
 
 /* <======================================magic remote====================================> */
 .apex-image {
-  width: 100vw;
-  height: 100vh;
-  display: flex;              
+  /* background-color: burlywood; */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* display: flex;               */
   justify-content: center;   
   align-items: center;         
   overflow: hidden;           
 }
+.apex-image h1{
+  text-align: center;
+   background:rgba(237, 65, 2, 0.95);
+   padding-top: 20px;
+  font-size: 2.5rem;
+}
+.apex-image h1 sup{
+  font-size: 1.2rem;
+}
+.apex-image p{
+  background:rgba(237, 65, 2, 0.95);
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .apex-image img {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   object-fit: cover;             
 }
 
