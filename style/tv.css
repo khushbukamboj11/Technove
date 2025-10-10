@@ -11,7 +11,9 @@ body {
 
 .smarttv-section {
   display: flex;
-  background:rgb(232, 216, 249);
+  /* background:rgb(232, 216, 249); */
+ /* background: linear-gradient(to bottom right, #ede2ff, #ffffff); */
+ background: radial-gradient(circle at top center, #f3e8ff 15%, #ffffff 60%);
   align-items: center;
   justify-content: space-between;
   padding: 80px 8%;
@@ -61,7 +63,7 @@ body {
 }
 
 .size-logos button {
-  background: #fff;
+  background: #bab9b9;
   border: none;
   margin-right: 10px;
   padding:
@@ -83,6 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10%;
+  margin-left: 100px;
 
 
 }
@@ -689,7 +692,7 @@ body {
   align-items: center;
 }
 
-.ott-image::before {
+/* .ott-image::before {
   content: "";
   position: absolute;
   width: 70%;
@@ -698,13 +701,12 @@ body {
   border-radius: 20px;
   z-index: -1;
   transform: translate(-10%, 5%);
-}
+} */
 
 .ott-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .ott-content {
@@ -713,21 +715,21 @@ body {
 
 .ott-content h4 {
   color: #d32f2f;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
 .ott-content h2 {
   color: #111;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 .ott-content p {
   color: #555;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 25px;
   max-width: 500px;
